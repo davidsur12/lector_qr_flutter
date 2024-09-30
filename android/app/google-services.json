@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "570915161332",
+    "project_id": "mlkitapps-3d964",
+    "storage_bucket": "mlkitapps-3d964.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570915161332:android:692669c4c6955460d50aa1",
+        "android_client_info": {
+          "package_name": "com.mlkit.mlkitpackage.mlkitbarcode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAiOfUqaxbwYNC46xlXDTU3629zj81SY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570915161332:android:5470ae38af7e25e9d50aa1",
+        "android_client_info": {
+          "package_name": "com.mlkitbarcode.package.mlkitbarcodeqr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAiOfUqaxbwYNC46xlXDTU3629zj81SY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
