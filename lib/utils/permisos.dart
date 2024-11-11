@@ -2,24 +2,52 @@
 import 'package:permission_handler/permission_handler.dart';
 
 class Permisos{
-  Future<void> checkCameraPermission() async {
-    // Verificar si el permiso de la cámara ya ha sido concedido.
-    if (await Permission.camera.isGranted) {
-      // Permiso concedido, puedes usar la cámara.
-      print('Permiso de cámara concedido.');
-    }
-    // Si no está concedido, pedimos el permiso.
-    else {
-      PermissionStatus status = await Permission.camera.request();
-      if (status.isGranted) {
-        print('Permiso de cámara concedido tras la solicitud.');
-      } else if (status.isDenied) {
-        print('Permiso de cámara denegado.');
-      } else if (status.isPermanentlyDenied) {
-        print('Permiso de cámara denegado permanentemente.');
-        openAppSettings(); // Redirige a la configuración de la aplicación para que el usuario lo habilite manualmente.
+
+  static Future<bool> checkPermissionCamera() async {
+
+    //Permiso de la camara devuelve true si se tiene permiso de los contrario debuel  false
+    var permisoCamara = await Permission.camera.status;
+    bool _PermissionGaratisadoCamara = false;
+    if (permisoCamara.isGranted) {
+
+      //_PermissionGaratisadoCamara = true;
+      return  await true;
+    } else if (permisoCamara.isDenied) {
+      // Solicitar el permiso si ha sido denegado
+      if (await Permission.camera
+          .request()
+          .isGranted) {
+
+        //_PermissionGaratisadoCamara = true;
+        return await true;
       }
     }
+    return await false;
   }
+
+  static Future<bool> checkPermissionAlamacenamkento() async{
+    //Permiso de la almacenamiento devuelve true si se tiene permiso de los contrario debuel  false
+
+
+    var permisoAlmacenamiento = await Permission.storage.status;
+
+    if (permisoAlmacenamiento.isGranted) {
+
+
+      //_PermissionGaratisadoAlamcenamiento = true; // Permiso concedido
+      return await true;
+    } else if (permisoAlmacenamiento.isDenied) {
+      // Solicitar el permiso si ha sido denegado
+      if (await Permission.camera
+          .request()
+          .isGranted) {
+
+        //_PermissionGaratisadoAlamcenamiento = true;
+        return await true;
+      }
+    }
+    return await false;
+  }
+
 
 }

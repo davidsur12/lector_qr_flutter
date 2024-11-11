@@ -40,6 +40,9 @@ dependencies:
   change_app_package_name: ^1.4.0
   permission_handler: ^11.3.1
   camera: ^0.11.0+2
+  another_flutter_splash_screen: ^1.2.1
+  get: ^4.6.6
+  persistent_bottom_nav_bar: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +65,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/imagenes/
+    - assets/iconos/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
